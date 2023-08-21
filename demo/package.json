@@ -1,0 +1,32 @@
+{
+  "name": "@oruga-datatable/demo",
+  "private": true,
+  "version": "0.0.1",
+  "description": "A Oruga table wrapper",
+  "keywords": [
+    "oruga",
+    "datatable",
+    "vue",
+    "typescript"
+  ],
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "update": "ncu -u"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/vue-fontawesome": "^3.0.3",
+    "@oruga-ui/oruga-next": "^0.6.0",
+    "@oruga-ui/theme-bootstrap": "^0.4.0",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.0",
+    "@types/node": "^20.5.1",
+    "@vitejs/plugin-vue": "^4.3.2",
+    "oruga-datatable": "^0.0.1",
+    "vite": "^4.4.9"
+  }
+}

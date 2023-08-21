@@ -1,0 +1,25 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.json",
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*",
+      ],
+    },
+    "composite": true,
+    "declaration": true,
+    "declarationDir": "dist",
+    "outDir": "dist",
+  },
+}

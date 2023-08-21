@@ -1,0 +1,50 @@
+{
+  "name": "oruga-datatable",
+  "private": false,
+  "version": "0.0.1",
+  "description": "A Oruga table wrapper",
+  "main": "dist/index.cjs",
+  "module": "dist/index.es",
+  "types": "dist/src/index.d.ts",  
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "keywords": [
+    "oruga",
+    "datatable",
+    "vue",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mlmoravek/oruga-datatable"
+  },
+  "publishConfig": {
+    "registry": "https://artifacts.init.de/artifactory/api/npm/webdev-commons-npm/"
+  },
+  "author": "mlmoravek",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf ./dist && vue-tsc --noEmit && vite build --emptyOutDir && vue-tsc --emitDeclarationOnly",
+    "preversion": "npm run lint",
+    "prepublish": "npm run build",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "update": "ncu -u"
+  },
+  "devDependencies": {
+  },
+  "peerDependencies": {
+    "@oruga-ui/oruga-next": "^0.6.0",
+    "vue": "^3.3.4"
+  }
+}
